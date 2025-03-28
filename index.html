@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +14,16 @@
         <div class="menu">
             <button class="menu-button">☰ Меню</button>
             <div class="menu-content">
-                <a href="#">Главная</a>
-                <a href="#">Галерея</a>
-                <a href="#">Контакты</a>
+                <a href="#home">Главная</a>
+                <a href="#services">Услуги</a>
+                <a href="#portfolio">Наши работы</a>
+                <a href="#about">О нас</a>
+                <a href="#contacts">Контакты</a>
             </div>
         </div>
     </header>
     <main>
-        <section class="gallery">
+        <section class="gallery" id="portfolio">
             <img src="img/JD O ill be back soon.jpg" alt="Проект 1">
             <img src="img/JD O Stram starting soon.jpg" alt="Проект 2">
             <img src="img/JD O Обложка.jpg" alt="Проект 3">
@@ -33,14 +35,15 @@
         <div class="footer-section">
             <h3>Поддержка</h3>
             <p>Телефон: +7 (123) 456-78-90</p>
-            <p>Email: <a href="AEProject@gmail.com"><br>AEProject@gmail.com</a></p>
+            <p>Email: <a href="mailto:AEProject@gmail.com">AEProject@gmail.com</a></p>
         </div>
         <div class="footer-section">
             <h3>Услуги</h3>
-            <p><a href="#">Создание сайтов</a></p>
-            <p><a href="#">SEO-продвижение</a></p>
-            <p><a href="#">Техническая поддержка</a></p>
+            <p><a href="#services">Создание сайтов</a></p>
+            <p><a href="#services">SEO-продвижение</a></p>
+            <p><a href="#services">Техническая поддержка</a></p>
         </div>
+        <script src="JS/EAProject.js"></script>
         <div class="footer-section">
             <h3>О нас</h3>
             <p>Мы разрабатываем качественные сайты под ключ, помогая вашему бизнесу находить клиентов.</p>
