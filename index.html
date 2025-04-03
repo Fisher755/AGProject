@@ -3,26 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EAProject</title>
+    <title>AGProject</title>
     <link href="Styles/styles.css" rel="stylesheet">
+    <div class="lang-switcher">
+        <button class="lang-btn active">RU</button>
+        <button class="lang-btn">EN</button>
+    </div>
 </head>
 
 <body>
-    <header>
-        <img src="img/AE logo.png" alt="Логотип" class="logo">
-        <span>Услуги по созданию Ваших сайтов</span>
-        <div class="menu">
-            <button class="menu-button">☰ Меню</button>
-            <div class="menu-content">
-                <a href="#home">Главная</a>
-                <a href="#services">Услуги</a>
-                <a href="#portfolio">Наши работы</a>
-                <a href="#about">О нас</a>
-                <a href="#contacts">Контакты</a>
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Логотип и название -->
+            <div class="branding">
+                <img src="img/AE logo.png" alt="Логотип" class="logo">
+                <span class="tagline">Услуги по созданию Ваших сайтов</span>
             </div>
+    
+            <!-- Основная навигация -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Главная</a></li>
+                    
+                    <!-- Вставляем выпадающее меню услуг ВМЕСТО обычной ссылки -->
+                    <li class="dropdown">
+                        <a href="#services" class="nav-link">Услуги ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#webdev">Создание сайтов</a></li>
+                            <li><a href="#seo">SEO-продвижение</a></li>
+                            <li><a href="#support">Техподдержка</a></li>
+                            <li class="dropdown-submenu">
+                                <a href="#design">Дизайн ▸</a>
+                                <ul class="submenu">
+                                    <li><a href="#ux">UX/UI Дизайн</a></li>
+                                    <li><a href="#logo">Логотипы</a></li>
+                                    <li><a href="#branding">Брендинг</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Конец выпадающего меню -->
+                    
+                    <li><a href="#portfolio" class="nav-link">Наши работы</a></li>
+                    <li><a href="#about" class="nav-link">О нас</a></li>
+                    <li><a href="#contacts" class="nav-link">Контакты</a></li>
+                </ul>
+                <!-- Языковой переключатель -->
+                <div class="lang-switcher">
+                    <button class="lang-btn active">RU</button>
+                    <button class="lang-btn">EN</button>
+                </div>
+                <button class="cta-button header-cta">Заказать сайт</button>
+            </nav>
+    
+            <!-- Мобильное меню -->
+            <button class="mobile-menu-toggle" aria-label="Меню">
+                <span class="hamburger"></span>
+            </button>
         </div>
+        <div class="scroll-progress"></div>
     </header>
+    
+    <button class="back-to-top" aria-label="Наверх">↑</button>
+
     <main>
+        <section class="hero" id="home">
+            <h1>Профессиональные сайты для вашего бизнеса</h1>
+            <p>От идеи до реализации под ключ</p>
+            <button class="cta-button">Обсудить проект</button>
+        </section>
+        <section id="services">
+            <h2>Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <p>Одностраничный сайт для быстрого запуска</p>
+                </div>
+                <!-- тут пишем какие услуги -->
+            </div>
+        </section>
         <section class="gallery" id="portfolio">
             <img src="img/JD O ill be back soon.jpg" alt="Проект 1">
             <img src="img/JD O Stram starting soon.jpg" alt="Проект 2">
@@ -30,7 +88,19 @@
             <img src="img/голубоватый родченко.png" alt="Проект 4">
         </section>
     </main>
-      
+
+    <!--Это секция для принятия заказов-->
+    <section id="contacts">
+        <h2>Свяжитесь с нами</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Ваше имя" required>
+        <input type="email" placeholder="Ваш email" required>
+        <input type="tel" placeholder="Ваш телефон">
+        <textarea placeholder="Расскажите о вашем проекте"></textarea>
+        <button type="submit">Отправить заявку</button>
+        </form>
+    </section>
+    
     <footer>
         <div class="footer-section">
             <h3>Поддержка</h3>
