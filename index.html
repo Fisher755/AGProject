@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGProject</title>
     <link href="Styles/styles.css" rel="stylesheet">
-    <div class="lang-switcher">
-        <button class="lang-btn active">RU</button>
-        <button class="lang-btn">EN</button>
-    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -48,13 +45,17 @@
                     <li><a href="#about" class="nav-link">О нас</a></li>
                     <li><a href="#contacts" class="nav-link">Контакты</a></li>
                 </ul>
-                <!-- Языковой переключатель -->
-                <div class = "theme-switcher">
-                    <button class = "theme-btn active" data-theme = "ligth">Светлая тема</button>
-                    <button class = "theme-btn " data-theme = "dark">Тёмная тема</button>
-                </div>
                 <button class="cta-button header-cta">Заказать сайт</button>
             </nav>
+             <!-- Светлая/тёмная тема -->
+             <div class="theme-switcher">
+                <button class="theme-btn active" data-theme="light" title="Светлая тема">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="theme-btn" data-theme="dark" title="Тёмная тема">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
     
             <!-- Мобильное меню -->
             <button class="mobile-menu-toggle" aria-label="Меню">
@@ -100,7 +101,20 @@
         <button type="submit">Отправить заявку</button>
         </form>
     </section>
-    
+    <section class="about" id="about">
+        <h2>О нас</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Мы — <strong>AGILITY</strong>, молодая и амбициозная команда, которая стремится изменить мир веб-разработки. Несмотря на наш недавний старт, мы подходим к каждому проекту с максимальной ответственностью и профессионализмом, чтобы ваш бизнес получил лучшее цифровое решение.</p>
+                <p>Наша команда состоит из талантливых специалистов, которые уже имеют опыт работы в веб-дизайне, разработке и маркетинге. Мы объединили свои силы, чтобы создавать сайты, которые не только выглядят современно, но и приносят реальные результаты. Мы постоянно учимся и следим за последними трендами, чтобы предлагать вам самые актуальные решения.</p>
+                <p>Мы понимаем, как важно доверие в работе с новой командой, поэтому мы гарантируем прозрачность, внимание к деталям и индивидуальный подход к каждому клиенту. Давайте начнём ваш проект вместе и сделаем его успешным!</p>
+            </div>
+            </div>
+            <div class="about-image">
+                <img src="img/team.jpg" alt="Наша команда">
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="footer-section">
             <h3>Поддержка</h3>
@@ -114,10 +128,6 @@
             <p><a href="#services">Техническая поддержка</a></p>
         </div>
         <script src="JS/EAProject.js"></script>
-        <div class="footer-section">
-            <h3>О нас</h3>
-            <p>Мы разрабатываем качественные сайты под ключ, помогая вашему бизнесу находить клиентов.</p>
-        </div>
     </footer>
 </body>
 </html>
