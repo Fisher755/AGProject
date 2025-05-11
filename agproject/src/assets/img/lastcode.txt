@@ -1,0 +1,117 @@
+ <div className="App">
+      <header className="A">
+        <div className="header-container">
+          <div className="branding">
+            <img src="img/AE logo.png" alt="Логотип" className="logo" />
+            <span className="tagline">Услуги по созданию Ваших сайтов</span>
+          </div>
+
+          <nav className="main-nav">
+            <ul className="nav-list">
+              <li><a href="#home" className="nav-link">Главная</a></li>
+
+              {/* Вставляем выпадающее меню услуг ВМЕСТО обычной ссылки */}
+              <li className="dropdown">
+                <a href="#services" className="nav-link">Услуги ▾</a>
+                <ul className="dropdown-menu">
+                  <li><a href="#webdev">Создание сайтов</a></li>
+                  <li><a href="#seo">SEO-продвижение</a></li>
+                  <li><a href="#support">Техподдержка</a></li>
+                  <li className="dropdown-submenu">
+                    <a href="#design">Дизайн ▸</a>
+                    <ul className="submenu">
+                      <li><a href="#ux">UX/UI Дизайн</a></li>
+                      <li><a href="#logo">Логотипы</a></li>
+                      <li><a href="#branding">Брендинг</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li><a href="#portfolio" className="nav-link">Наши работы</a></li>
+              <li><a href="#about" className="nav-link">О нас</a></li>
+              <li><a href="#contacts" className="nav-link">Контакты</a></li>
+            </ul>
+            <button className="cta-button header-cta">Заказать сайт</button>
+          </nav>
+
+          {/* Светлая/тёмная тема */}
+          <div className="theme-switcher">
+            <button className="theme-btn active" data-theme="light" title="Светлая тема">
+              <i className="fas fa-sun"></i>
+            </button>
+            <button className="theme-btn" data-theme="dark" title="Тёмная тема">
+              <i className="fas fa-moon"></i>
+            </button>
+          </div>
+
+          <button className="mobile-menu-toggle" aria-label="Меню">
+            <span className="hamburger"></span>
+          </button>
+        </div>
+        <div className="scroll-progress"></div>
+      </header>
+
+      <button className="back-to-top" aria-label="Наверх">↑</button>
+
+      <main>
+        <section className="hero" id="home">
+          <h1>Профессиональные сайты для вашего бизнеса</h1>
+          <p>От идеи до реализации под ключ</p>
+          <button className="cta-button">Обсудить проект</button>
+        </section>
+        <section id="services">
+          <h2>Наши услуги</h2>
+          <div className="services-grid">
+            <div className="service-card">
+              <p>Одностраничный сайт для быстрого запуска</p>
+            </div>
+          </div>
+        </section>
+        <section className="gallery" id="portfolio">
+          <img src="img/JD O ill be back soon.jpg" alt="Проект 1" />
+          <img src="img/JD O Stram starting soon.jpg" alt="Проект 2" />
+          <img src="img/JD O Обложка.jpg" alt="Проект 3" />
+          <img src="img/голубоватый родченко.png" alt="Проект 4" />
+        </section>
+      </main>
+
+      {/* Это секция для принятия заказов */}
+      <section id="contacts">
+        <h2>Свяжитесь с нами</h2>
+        <form className="contact-form">
+          <input type="text" placeholder="Ваше имя" required />
+          <input type="email" placeholder="Ваш email" required />
+          <input type="tel" placeholder="Ваш телефон" />
+          <textarea placeholder="Расскажите о вашем проекте"></textarea>
+          <button type="submit">Отправить заявку</button>
+        </form>
+      </section>
+      <section className="about" id="about">
+        <h2>О нас</h2>
+        <div className="about-content">
+          <div className="about-text">
+            <p>Мы — <strong>AGILITY</strong>, молодая и амбициозная команда, которая стремится изменить мир веб-разработки. Несмотря на наш недавний старт, мы подходим к каждому проекту с максимальной ответственностью и профессионализмом, чтобы ваш бизнес получил лучшее цифровое решение.</p>
+            <p>Наша команда состоит из талантливых специалистов, которые уже имеют опыт работы в веб-дизайне, разработке и маркетинге. Мы объединили свои силы, чтобы создавать сайты, которые не только выглядят современно, но и приносят реальные результаты. Мы постоянно учимся и следим за последними трендами, чтобы предлагать вам самые актуальные решения.</p>
+            <p>Мы понимаем, как важно доверие в работе с новой командой, поэтому мы гарантируем прозрачность, внимание к деталям и индивидуальный подход к каждому клиенту. Давайте начнём ваш проект вместе и сделаем его успешным!</p>
+          </div>
+          <div className="about-image">
+            <img src="img/team.jpg" alt="Наша команда" />
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div className="footer-section">
+          <h3>Поддержка</h3>
+          <p>Телефон: +7 (123) 456-78-90</p>
+          <p>Email: <a href="mailto:AEProject@gmail.com">AEProject@gmail.com</a></p>
+        </div>
+        <div className="footer-section">
+          <h3>Услуги</h3>
+          <p><a href="#services">Создание сайтов</a></p>
+          <p><a href="#services">SEO-продвижение</a></p>
+          <p><a href="#services">Техническая поддержка</a></p>
+        </div>
+        <script src="JS/EAProject.js"></script>
+      </footer>
+    </div>
